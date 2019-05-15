@@ -1,0 +1,84 @@
+.movingintro1 {
+  height: 50px;
+  overflow: hidden;
+  position: relative;
+}
+
+.movingintro1 h1 {
+  font-size: 40px;
+  color: black;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  line-height: 50px;
+  text-align: center;
+  /* Starting position */
+  -moz-transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+  /* Apply animation to this element */
+  -moz-animation: movingintro1 15s linear infinite;
+  -webkit-animation: movingintro1 15s linear infinite;
+  animation: movingintro1 15s linear infinite;
+}
+
+/* Move it (define the animation) */
+@-moz-keyframes movingintro1 {
+  0% {
+    -moz-transform: translateX(100%);
+  }
+  100% {
+    -moz-transform: translateX(-100%);
+  }
+}
+@-webkit-keyframes movingintro1 {
+  0% {
+    -webkit-transform: translateX(100%);
+  }
+  100% {
+    -webkit-transform: translateX(-100%);
+  }
+}
+@keyframes movingintro1 {
+  0% {
+    -moz-transform: translateX(100%);
+    /* Firefox bug fix */
+    -webkit-transform: translateX(100%);
+    /* Firefox bug fix */
+    transform: translateX(100%);
+  }
+  100% {
+    -moz-transform: translateX(-100%);
+    /* Firefox bug fix */
+    -webkit-transform: translateX(-100%);
+    /* Firefox bug fix */
+    transform: translateX(-100%);
+  }
+}
+#message-list {
+  height: 70vh;
+  overflow: auto;
+}
+
+#channel-list {
+  height: 70vh;
+  overflow: auto;
+}
+
+#dezeniet {
+  background-color: white;
+}
+
+.list-group-item {
+  word-break: break-word;
+  white-space: normal;
+}
+
+* {
+  background-color: lightgrey;
+  font-family: "Avenir", Helvetica, sans-serif;
+  text-align: center;
+}
+
+/*# sourceMappingURL=styles.css.map */
